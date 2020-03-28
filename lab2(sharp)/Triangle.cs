@@ -10,7 +10,19 @@ namespace lab2_sharp_
     {
         public double a;
         public double b;
-        public double c;        
+        public double c;
+
+       public Triangle()
+        {
+            Random random = new Random();
+            a = random.Next(1, 10);
+            Console.WriteLine("a = " + a);
+            b = random.Next(1, 10);
+            Console.WriteLine("b = " + b);
+            c = random.Next(1, 10);
+            Console.WriteLine("c = " + c);
+        }
+        
         public bool isExists()
         {
             if (a + b > c && a + c > b && b + c > a)
@@ -35,11 +47,17 @@ namespace lab2_sharp_
         {          
           return (a + b + c);           
         }
-
-        public double getArea()
+        public double getSquare()
         {
             double p = (a + b + c) / 2;
             return Math.Sqrt(p * (p - a) * (p - b) * (p - c));
+        }
+        public void printTriangle()
+        {
+           
+            Console.WriteLine($"Угол A = {String.Format("{0:0.00}", getAngle1())} градусов, Угол В = {String.Format("{0:0.00}", getAngle2())} градусов, Угол C = {String.Format("{0:0.00}", getAngle3())} градусов");
+            Console.WriteLine($"P = {String.Format("{0:0.00}", getPerimeter())}cm, S = {String.Format("{0:0.00}", getSquare())}cm^2");
+        
         }
     }
 }
