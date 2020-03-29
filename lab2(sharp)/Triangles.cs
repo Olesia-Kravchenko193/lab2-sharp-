@@ -11,6 +11,7 @@ namespace lab2_sharp_
         public double side, h, squares, a, b, c;
         public void getTriangles(Triangles[] N_triangles)
         {
+            Console.WriteLine("Информация о треугольниках: ");
             Random r = new Random();
             for (int i = 0; i < N_triangles.Length; i++)
             {
@@ -39,8 +40,8 @@ namespace lab2_sharp_
         }
         public void printMAXsquare(Triangles[] N_triangles)
         {
-            Console.WriteLine($"Максимальную площадь имеет треугольник {getMAXsquare(N_triangles) + 1}");
-            Console.WriteLine($"Maximum: side = {N_triangles[getMAXsquare(N_triangles)].side}cm, h = {N_triangles[getMAXsquare(N_triangles)].h}cm, square = {N_triangles[getMAXsquare(N_triangles)].squares}cm^2");
+            Console.WriteLine($"Максимальную площадь имеет треугольник № {getMAXsquare(N_triangles) + 1}");
+            Console.WriteLine($"S = {N_triangles[getMAXsquare(N_triangles)].squares}cm^2");
         }
 
 
@@ -49,6 +50,7 @@ namespace lab2_sharp_
 
         public void getRight_triangleTriangles(Triangles[] M_triangles)
         {
+            Console.WriteLine("Информация о прямоугольных треугольниках: ");
             Random r = new Random();
             for (int i = 0; i < M_triangles.Length; i++)
             {
@@ -77,8 +79,8 @@ namespace lab2_sharp_
         }
         public void printMinHypotenuse(Triangles[] M_triangles)
         {
-            Console.WriteLine($"Самую маленькую гипотенузу имеет треугольник {getMinHypotenuse(M_triangles) + 1}");
-            Console.WriteLine($"Minimum: c = {String.Format("{0:0.00}", M_triangles[getMinHypotenuse(M_triangles)].c)}cm");
+            Console.WriteLine($"Самую маленькую гипотенузу имеет треугольник № {getMinHypotenuse(M_triangles) + 1}");
+            Console.WriteLine($"c = {String.Format("{0:0.00}", M_triangles[getMinHypotenuse(M_triangles)].c)}cm");
         }
     }
 }

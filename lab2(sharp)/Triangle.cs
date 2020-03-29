@@ -15,11 +15,11 @@ namespace lab2_sharp_
        public Triangle()
         {
             Random random = new Random();
-            a = random.Next(1, 10);
+            a = random.Next(2, 20);
             Console.WriteLine("a = " + a);
-            b = random.Next(1, 10);
+            b = random.Next(2, 20);
             Console.WriteLine("b = " + b);
-            c = random.Next(1, 10);
+            c = random.Next(2, 20);
             Console.WriteLine("c = " + c);
         }
         
@@ -55,7 +55,7 @@ namespace lab2_sharp_
         public void printTriangle()
         {
            
-            Console.WriteLine($"Угол A = {String.Format("{0:0.00}", getAngle1())} градусов, Угол В = {String.Format("{0:0.00}", getAngle2())} градусов, Угол C = {String.Format("{0:0.00}", getAngle3())} градусов");
+            Console.WriteLine($"Угол A = {String.Format("{0:0.00}", getAngle1())} градусов, Угол В = {String.Format("{0:0.00}", getAngle3())} градусов, Угол C = {String.Format("{0:0.00}", getAngle1())} градусов");
             Console.WriteLine($"P = {String.Format("{0:0.00}", getPerimeter())}cm, S = {String.Format("{0:0.00}", getSquare())}cm^2");
         
         }
